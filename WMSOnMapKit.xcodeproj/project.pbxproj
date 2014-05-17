@@ -16,21 +16,8 @@
 		5A3769BA1926AAF20053B3A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3769B91926AAF20053B3A5 /* Images.xcassets */; };
 		5A3769D71926AB0A0053B3A5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3769D61926AB0A0053B3A5 /* MapKit.framework */; };
 		5A3769D91926AB110053B3A5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3769D81926AB110053B3A5 /* CoreLocation.framework */; };
-		5A3769DC1926AB9A0053B3A5 /* WMSOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769DB1926AB9A0053B3A5 /* WMSOverlay.m */; };
-		5A3769E01926AC7B0053B3A5 /* WMSOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769DF1926AC7B0053B3A5 /* WMSOverlayRenderer.m */; };
 		5A3769E31926AFA90053B3A5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769E21926AFA90053B3A5 /* MapViewController.m */; };
-		5A3769FE1926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769E91926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.m */; };
-		5A3769FF1926BB070053B3A5 /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769EB1926BB070053B3A5 /* NSData+MKBase64.m */; };
-		5A376A001926BB070053B3A5 /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769ED1926BB070053B3A5 /* NSDate+RFC1123.m */; };
-		5A376A011926BB070053B3A5 /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769EF1926BB070053B3A5 /* NSDictionary+RequestEncoding.m */; };
-		5A376A021926BB070053B3A5 /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769F11926BB070053B3A5 /* NSString+MKNetworkKitAdditions.m */; };
-		5A376A031926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769F31926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.m */; };
-		5A376A041926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769F51926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.m */; };
-		5A376A051926BB070053B3A5 /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769F71926BB070053B3A5 /* MKNetworkEngine.m */; };
-		5A376A061926BB070053B3A5 /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769FA1926BB070053B3A5 /* MKNetworkOperation.m */; };
-		5A376A071926BB070053B3A5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3769FD1926BB070053B3A5 /* Reachability.m */; };
-		5A376A0A1926BB330053B3A5 /* Downloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A376A091926BB330053B3A5 /* Downloader.m */; };
-		5A376A0D1926BB510053B3A5 /* WebRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A376A0C1926BB510053B3A5 /* WebRequestInfo.m */; };
+		5A438A561928076A008540AB /* WMSTileOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A438A551928076A008540AB /* WMSTileOverlay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,38 +35,11 @@
 		5A3769C01926AAF20053B3A5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5A3769D61926AB0A0053B3A5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5A3769D81926AB110053B3A5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		5A3769DA1926AB9A0053B3A5 /* WMSOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSOverlay.h; sourceTree = "<group>"; };
-		5A3769DB1926AB9A0053B3A5 /* WMSOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSOverlay.m; sourceTree = "<group>"; };
 		5A3769DD1926ABCF0053B3A5 /* MapViewUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewUtils.h; sourceTree = "<group>"; };
-		5A3769DE1926AC7B0053B3A5 /* WMSOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSOverlayRenderer.h; sourceTree = "<group>"; };
-		5A3769DF1926AC7B0053B3A5 /* WMSOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSOverlayRenderer.m; sourceTree = "<group>"; };
 		5A3769E11926AFA90053B3A5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		5A3769E21926AFA90053B3A5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		5A3769E81926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		5A3769E91926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		5A3769EA1926BB070053B3A5 /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
-		5A3769EB1926BB070053B3A5 /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
-		5A3769EC1926BB070053B3A5 /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
-		5A3769ED1926BB070053B3A5 /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
-		5A3769EE1926BB070053B3A5 /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
-		5A3769EF1926BB070053B3A5 /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
-		5A3769F01926BB070053B3A5 /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		5A3769F11926BB070053B3A5 /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		5A3769F21926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		5A3769F31926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		5A3769F41926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		5A3769F51926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		5A3769F61926BB070053B3A5 /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
-		5A3769F71926BB070053B3A5 /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
-		5A3769F81926BB070053B3A5 /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
-		5A3769F91926BB070053B3A5 /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
-		5A3769FA1926BB070053B3A5 /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
-		5A3769FC1926BB070053B3A5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		5A3769FD1926BB070053B3A5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		5A376A081926BB330053B3A5 /* Downloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Downloader.h; sourceTree = "<group>"; };
-		5A376A091926BB330053B3A5 /* Downloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Downloader.m; sourceTree = "<group>"; };
-		5A376A0B1926BB510053B3A5 /* WebRequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebRequestInfo.h; sourceTree = "<group>"; };
-		5A376A0C1926BB510053B3A5 /* WebRequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebRequestInfo.m; sourceTree = "<group>"; };
+		5A438A541928076A008540AB /* WMSTileOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSTileOverlay.h; sourceTree = "<group>"; };
+		5A438A551928076A008540AB /* WMSTileOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSTileOverlay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,22 +91,15 @@
 		5A3769AD1926AAF20053B3A5 /* WMSOnMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				5A376A081926BB330053B3A5 /* Downloader.h */,
-				5A376A091926BB330053B3A5 /* Downloader.m */,
-				5A376A0B1926BB510053B3A5 /* WebRequestInfo.h */,
-				5A376A0C1926BB510053B3A5 /* WebRequestInfo.m */,
-				5A3769E61926BB070053B3A5 /* MKNetworkKit */,
 				5A3769DD1926ABCF0053B3A5 /* MapViewUtils.h */,
-				5A3769DE1926AC7B0053B3A5 /* WMSOverlayRenderer.h */,
-				5A3769DF1926AC7B0053B3A5 /* WMSOverlayRenderer.m */,
-				5A3769DA1926AB9A0053B3A5 /* WMSOverlay.h */,
-				5A3769DB1926AB9A0053B3A5 /* WMSOverlay.m */,
 				5A3769E11926AFA90053B3A5 /* MapViewController.h */,
 				5A3769E21926AFA90053B3A5 /* MapViewController.m */,
 				5A3769B61926AAF20053B3A5 /* AppDelegate.h */,
 				5A3769B71926AAF20053B3A5 /* AppDelegate.m */,
 				5A3769B91926AAF20053B3A5 /* Images.xcassets */,
 				5A3769AE1926AAF20053B3A5 /* Supporting Files */,
+				5A438A541928076A008540AB /* WMSTileOverlay.h */,
+				5A438A551928076A008540AB /* WMSTileOverlay.m */,
 			);
 			path = WMSOnMapKit;
 			sourceTree = "<group>";
@@ -160,50 +113,6 @@
 				5A3769B51926AAF20053B3A5 /* WMSOnMapKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5A3769E61926BB070053B3A5 /* MKNetworkKit */ = {
-			isa = PBXGroup;
-			children = (
-				5A3769E71926BB070053B3A5 /* Categories */,
-				5A3769F61926BB070053B3A5 /* MKNetworkEngine.h */,
-				5A3769F71926BB070053B3A5 /* MKNetworkEngine.m */,
-				5A3769F81926BB070053B3A5 /* MKNetworkKit.h */,
-				5A3769F91926BB070053B3A5 /* MKNetworkOperation.h */,
-				5A3769FA1926BB070053B3A5 /* MKNetworkOperation.m */,
-				5A3769FB1926BB070053B3A5 /* Reachability */,
-			);
-			path = MKNetworkKit;
-			sourceTree = "<group>";
-		};
-		5A3769E71926BB070053B3A5 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				5A3769E81926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.h */,
-				5A3769E91926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.m */,
-				5A3769EA1926BB070053B3A5 /* NSData+MKBase64.h */,
-				5A3769EB1926BB070053B3A5 /* NSData+MKBase64.m */,
-				5A3769EC1926BB070053B3A5 /* NSDate+RFC1123.h */,
-				5A3769ED1926BB070053B3A5 /* NSDate+RFC1123.m */,
-				5A3769EE1926BB070053B3A5 /* NSDictionary+RequestEncoding.h */,
-				5A3769EF1926BB070053B3A5 /* NSDictionary+RequestEncoding.m */,
-				5A3769F01926BB070053B3A5 /* NSString+MKNetworkKitAdditions.h */,
-				5A3769F11926BB070053B3A5 /* NSString+MKNetworkKitAdditions.m */,
-				5A3769F21926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.h */,
-				5A3769F31926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.m */,
-				5A3769F41926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.h */,
-				5A3769F51926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		5A3769FB1926BB070053B3A5 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				5A3769FC1926BB070053B3A5 /* Reachability.h */,
-				5A3769FD1926BB070053B3A5 /* Reachability.m */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,23 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A3769DC1926AB9A0053B3A5 /* WMSOverlay.m in Sources */,
-				5A376A011926BB070053B3A5 /* NSDictionary+RequestEncoding.m in Sources */,
-				5A376A051926BB070053B3A5 /* MKNetworkEngine.m in Sources */,
-				5A376A041926BB070053B3A5 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
-				5A376A071926BB070053B3A5 /* Reachability.m in Sources */,
-				5A376A031926BB070053B3A5 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
-				5A376A0D1926BB510053B3A5 /* WebRequestInfo.m in Sources */,
-				5A376A0A1926BB330053B3A5 /* Downloader.m in Sources */,
 				5A3769B81926AAF20053B3A5 /* AppDelegate.m in Sources */,
 				5A3769E31926AFA90053B3A5 /* MapViewController.m in Sources */,
-				5A3769FE1926BB070053B3A5 /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				5A3769B41926AAF20053B3A5 /* main.m in Sources */,
-				5A3769FF1926BB070053B3A5 /* NSData+MKBase64.m in Sources */,
-				5A376A061926BB070053B3A5 /* MKNetworkOperation.m in Sources */,
-				5A3769E01926AC7B0053B3A5 /* WMSOverlayRenderer.m in Sources */,
-				5A376A021926BB070053B3A5 /* NSString+MKNetworkKitAdditions.m in Sources */,
-				5A376A001926BB070053B3A5 /* NSDate+RFC1123.m in Sources */,
+				5A438A561928076A008540AB /* WMSTileOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +316,7 @@
 				5A3769D21926AAF20053B3A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

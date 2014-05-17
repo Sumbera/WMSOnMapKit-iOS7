@@ -7,8 +7,7 @@
 //
 
 #import "MapViewController.h"
-#import "WMSOverlay.h"
-#import "WMSOverlayRenderer.h"
+
 
 @implementation MapViewController
 
@@ -69,7 +68,7 @@
 //---------------------------------------------------------
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBarHidden = TRUE;
+    self.navigationController.navigationBarHidden = YES;
     [super viewWillAppear:animated];
 }
 //---------------------------------------------------------
@@ -100,23 +99,12 @@
     return (MKMapView *) self.view;
     
 }
-// -- loads set of WMS stored as array with BBOX %f, %f, %f, %f
-//----------------------------------------------------------------------------
--(void) addWMSOverlays: (NSArray*) overlays{
-    for ( WMSOverlay *wmsOverlay in overlays){
-        // -- add overlay
-        [ self.mkMapView addOverlay:wmsOverlay];
-        
-    }
-    
-}
-
 
 #pragma mark -- MKMapView delegate
 //----------------------------------------------------------------------------
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay {
-    WMSOverlayRenderer *wmsOverlayRenderer = [[WMSOverlayRenderer alloc] initWithWMSLayer:overlay MapView:self.mkMapView];
-    return wmsOverlayRenderer;
+        return [[MKTileOverlayRenderer alloc] initWithTileOverlay:(MKTileOverlay *)overlay];
+
 }
 
 

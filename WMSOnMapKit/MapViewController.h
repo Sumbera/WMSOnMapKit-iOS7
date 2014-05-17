@@ -13,6 +13,4 @@
 @property(nonatomic, readonly, weak) MKMapView *mkMapView;
 
 
--(void) addWMSOverlays: (NSArray*) overlays;
-
 @end

@@ -5,10 +5,11 @@
 //  Created by Stanislav Sumbera on 16/05/14.
 //  Copyright (c) 2014 sumbera. All rights reserved.
 //
-
+#import <MapKit/MapKit.h>
 #import "AppDelegate.h"
 #import "MapViewController.h"
-#import "WMSOverlay.h"
+#import "WMSTileOverlay.h"
+
 
 @implementation AppDelegate
 
@@ -31,11 +32,10 @@
     [self.window makeKeyAndVisible];
     
     
-    WMSOverlay * wmsOverlay =[[WMSOverlay alloc] initWithName:@"Katastr" Url:@"http://services.cuzk.cz/wms/wms.asp?&LAYERS=KN&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&CRS=EPSG:900913&WIDTH=256&HEIGHT=256" Opacity:1 UseMercator:YES];
+    NSString * url = @"http://services.cuzk.cz/wms/wms.asp?&LAYERS=KN&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&CRS=EPSG:900913&WIDTH=256&HEIGHT=256";
+    [ mapViewController.mkMapView addOverlay:[[WMSTileOverlay alloc] initWithName:@"Katastr" Url:url Opacity:1 UseMercator:YES]];
+
     
-    [mapViewController  addWMSOverlays:[NSArray arrayWithObjects:wmsOverlay, nil]];
-    
-    [self.window makeKeyAndVisible];
     return YES;
 }
 

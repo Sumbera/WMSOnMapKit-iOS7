@@ -16,24 +16,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
     MapViewController * mapViewController = [[MapViewController alloc] init];
-    
     UINavigationController *mainNavCtrl = [[UINavigationController alloc]initWithRootViewController:mapViewController];
     
     self.window.rootViewController = mainNavCtrl;
     
     [self.window makeKeyAndVisible];
     
-    
     NSString * url = @"http://services.cuzk.cz/wms/wms.asp?&LAYERS=KN&REQUEST=GetMap&SERVICE=WMS&VERSION=1.3.0&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&CRS=EPSG:900913&WIDTH=256&HEIGHT=256";
-    [ mapViewController.mkMapView addOverlay:[[WMSTileOverlay alloc] initWithName:@"Katastr" Url:url Opacity:1 UseMercator:YES]];
+    [ mapViewController.mkMapView addOverlay:[[WMSTileOverlay alloc] initWithUrl:url UseMercator:YES]];
 
     
     return YES;

@@ -11,13 +11,7 @@
 @interface WMSTileOverlay : MKTileOverlay
 
 @property (nonatomic, strong) NSString * url;
-@property (nonatomic, assign) float      opacity;
-@property (nonatomic, strong) NSString * name;
 @property (nonatomic, assign) BOOL       useMercator; // -- if use 900913 mercator projection or WGS84
 
-//------------------------------------------------------------
-- (id)initWithName:(NSString*)nameArg
-               Url:(NSString*)urlArg
-           Opacity: (CGFloat) opacityArg
-       UseMercator: (BOOL) useMercatorArg;
+- (id)initWithUrl:(NSString*)urlArg  UseMercator: (BOOL) useMercatorArg;
 @end

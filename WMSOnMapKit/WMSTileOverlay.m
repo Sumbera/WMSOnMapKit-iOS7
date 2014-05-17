@@ -13,16 +13,11 @@
 
 
 //------------------------------------------------------------
-- (id)initWithName:(NSString*)nameArg
-               Url:(NSString*)urlArg
-           Opacity: (CGFloat) opacityArg
-       UseMercator: (BOOL) useMercatorArg
+- (id)initWithUrl:(NSString*)urlArg  UseMercator: (BOOL) useMercatorArg
 {
     
     if ((self = [self init])) {
-        self.name = nameArg;
         self.url  = urlArg;
-        self.opacity = opacityArg;
         self.useMercator = useMercatorArg;
     }
     return self;

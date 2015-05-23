@@ -1,6 +1,6 @@
 WMSOnMapKit-iOS7
 ================
-sample code of using WMS in MapKit on iOS7
+sample code of using WMS in MapKit on iOS7, works on iOS8 too
 
 iOS7 introduced new class MKTileOverlay sample derives from this class WMSTileOverlay
 

@@ -14,6 +14,7 @@
 #define MAXIMUM_ZOOM 25
 
 #define TILE_CACHE   @"TILE_CACHE"
+#define TILE_CACHE_TIME_LIMIT 7200 // 2 hours
 
 
 //------------------------------------------------------------

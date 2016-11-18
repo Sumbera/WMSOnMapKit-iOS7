@@ -22,6 +22,7 @@
     }
     return self;
 }
+
 //------------------------------------------------------------
 - (NSURL *)URLForTilePath:(MKTileOverlayPath)path{
     // BBOX in WGS84
@@ -45,16 +46,30 @@
 }
 
 //------------------------------------------------------------
+- (NSDate *)creationDateForFile:(NSString *)fileName
+{
+    NSDictionary *fileAttributes = [[NSFileManager defaultManager] attributesOfItemAtPath:fileName error:nil];
+    NSDate *fileTimestamp = [fileAttributes fileCreationDate];
+    
+    return fileTimestamp;
+}
+
+//------------------------------------------------------------
 - (void)loadTileAtPath:(MKTileOverlayPath)path result:(void (^)(NSData *tileData, NSError *error))  result{
     
     NSURL    *url =  [self URLForTilePath: path];
   
-    
     NSString *filePath = getFilePathForURL([url absoluteString],TILE_CACHE);
-    // -- check if tile is cached
+    // -- check if tile is cached and if it has reached the tile cache time limit
     if ([[NSFileManager defaultManager] fileExistsAtPath: filePath]){
-         NSData *tileData = [NSData dataWithContentsOfFile:filePath];
-         result (tileData, nil);
+        
+        NSDate *fileTimestamp = [self creationDateForFile:filePath];
+        int ageOfFile = (int) [[NSDate date] timeIntervalSinceDate:fileTimestamp];
+        
+        if (ageOfFile <= TILE_CACHE_TIME_LIMIT){
+            NSData *tileData = [NSData dataWithContentsOfFile:filePath];
+            result (tileData, nil);
+        }
     }
     // -- download
     else{

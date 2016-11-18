@@ -58,10 +58,12 @@
 - (void)loadTileAtPath:(MKTileOverlayPath)path result:(void (^)(NSData *tileData, NSError *error))  result{
     
     NSURL    *url =  [self URLForTilePath: path];
-  
     NSString *filePath = getFilePathForURL([url absoluteString],TILE_CACHE);
     // -- check if tile is cached and if it has reached the tile cache time limit
     if ([[NSFileManager defaultManager] fileExistsAtPath: filePath]){
+
+        NSData *tileData = [NSData dataWithContentsOfFile:filePath];
+        result (tileData, nil);
         
         NSDate *fileTimestamp = [self creationDateForFile:filePath];
         int ageOfFile = (int) [[NSDate date] timeIntervalSinceDate:fileTimestamp];
@@ -73,24 +75,26 @@
     }
     // -- download
     else{
-         NSURLRequest *request = [NSURLRequest requestWithURL:url];
-         [NSURLConnection sendAsynchronousRequest:request
-         queue:[NSOperationQueue mainQueue]
-         completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                             if (error) {
-                                 NSLog(@"Error downloading tile ! \n");
-                                 result(nil, error);
-                                 
-                             }
-                             else {
-                                [data  writeToFile: filePath  atomically:YES];
-                                 result (data, nil);
-                             }
-         
-         }];
-         
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                              delegate:nil
+                                                         delegateQueue:[NSOperationQueue mainQueue]];
+        
+        NSURLSessionDataTask *sessionTask = [session dataTaskWithURL:url
+                                                   completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+           if (error) {
+               NSLog(@"Error downloading tile ! \n");
+               result(nil, error);
+               
+           }
+           else {
+               [data  writeToFile: filePath  atomically:YES];
+               result (data, nil);
+           }
+        }];
+        
+        [sessionTask resume];
     }
-
+    
 }
 
 @end

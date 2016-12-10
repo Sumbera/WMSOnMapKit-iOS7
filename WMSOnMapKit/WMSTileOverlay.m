@@ -61,9 +61,6 @@
     NSString *filePath = getFilePathForURL([url absoluteString],TILE_CACHE);
     // -- check if tile is cached and if it has reached the tile cache time limit
     if ([[NSFileManager defaultManager] fileExistsAtPath: filePath]){
-
-        NSData *tileData = [NSData dataWithContentsOfFile:filePath];
-        result (tileData, nil);
         
         NSDate *fileTimestamp = [self creationDateForFile:filePath];
         int ageOfFile = (int) [[NSDate date] timeIntervalSinceDate:fileTimestamp];
@@ -71,30 +68,27 @@
         if (ageOfFile <= TILE_CACHE_TIME_LIMIT){
             NSData *tileData = [NSData dataWithContentsOfFile:filePath];
             result (tileData, nil);
+            return;
         }
     }
+
     // -- download
-    else{
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
-                                                              delegate:nil
-                                                         delegateQueue:[NSOperationQueue mainQueue]];
-        
-        NSURLSessionDataTask *sessionTask = [session dataTaskWithURL:url
-                                                   completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
-           if (error) {
-               NSLog(@"Error downloading tile ! \n");
-               result(nil, error);
-               
-           }
-           else {
-               [data  writeToFile: filePath  atomically:YES];
-               result (data, nil);
-           }
-        }];
-        
-        [sessionTask resume];
-    }
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]
+                                                          delegate:nil
+                                                     delegateQueue:[NSOperationQueue mainQueue]];
     
+    NSURLSessionDataTask *sessionTask = [session dataTaskWithURL:url
+                                               completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+       if (error) {
+           NSLog(@"Error downloading tile ! \n");
+           result(nil, error);
+       } else {
+           [data  writeToFile: filePath  atomically:YES];
+           result (data, nil);
+       }
+    }];
+    
+    [sessionTask resume];
 }
 
 @end

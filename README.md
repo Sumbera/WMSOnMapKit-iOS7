@@ -1,6 +1,14 @@
-WMSOnMapKit-iOS7
-================
-sample code of using WMS in MapKit on iOS7, works on iOS8 too
+
+WMSOnMapKit-iOS
+=====================
+Update 2017 for iOS9 : check this video that sets in this sample  mkMapView.mapType = MKMapTypeHybridFlyover;
+in [MapViewController.m Line 38] ( https://github.com/Sumbera/WMSOnMapKit-iOS7/blob/master/WMSOnMapKit/MapViewController.m#L38 )
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-EfvoIJQkbs
+" target="_blank"><img src="http://img.youtube.com/vi/-EfvoIJQkbs/0.jpg" 
+ /></a>
+ 
+sample code of using WMS in MapKit on iOS
 
 iOS7 introduced new class MKTileOverlay sample derives from this class WMSTileOverlay
 

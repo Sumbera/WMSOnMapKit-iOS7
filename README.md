@@ -1,6 +1,11 @@
 
 WMSOnMapKit-iOS
 =====================
+Update 2018 for iOS11 there is also a hack to enable ARKit
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=499iX4_ifHw
+" target="_blank"><img src="http://img.youtube.com/vi/499iX4_ifHw/0.jpg" 
+ /></a>
+
 Update 2017 for iOS9 : check this video that sets in this sample  mkMapView.mapType = MKMapTypeHybridFlyover;
 in [MapViewController.m Line 38] ( https://github.com/Sumbera/WMSOnMapKit-iOS7/blob/master/WMSOnMapKit/MapViewController.m#L38 )
 
